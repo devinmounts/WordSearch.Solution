@@ -8,27 +8,34 @@ namespace WordSearch.Models
     {
         //private int _result;
         private string _targetWord;
-        //private string[] _comparePhrase;
+        private string[] _comparePhrase = { };
         //private List<string> _testString = new List<string> { };
 
-        public WordCounter(string targetWord = "")
+        //public WordCounter(string targetWord = "")
+        //{
+        //    _targetWord = targetWord;
+        //}
+
+        public string GetTargetWord()
         {
-            _targetWord = targetWord;
+            return _targetWord;
         }
 
         public void SetTargetWord(string newTargetWord)
         {
             _targetWord = newTargetWord.ToLower();
         }
-        public string GetTargetWord()
+
+        public string[] GetCompareString()
         {
-            return _targetWord;
+            return _comparePhrase;
         }
 
-        public string[] SplitCompareString(string newComparePhrase)
+        public void SetSplitCompareString(string newComparePhrase)
         {
-            string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
-            return splitPhrase;
+            string[] splitPhrase = { };
+            splitPhrase = newComparePhrase.ToLower().Split(' ');
+            splitPhrase = _comparePhrase;
         }
 
 
