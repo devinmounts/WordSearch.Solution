@@ -15,14 +15,15 @@ namespace WordSearch.Models
             _targetWord = targetWord;
         }
 
-        public void SetTargetString(string newTargetWord)
+        public void SetTargetWord(string newTargetWord)
         {
-            _targetWord = newTargetWord;
+            _targetWord = newTargetWord.ToLower();
         }
         public string GetTargetWord()
         {
             return _targetWord;
         }
+
     }
 
 }

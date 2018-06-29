@@ -32,12 +32,27 @@ namespace WordSearch.Tests
 
             //Act
             string newTestTarget = "cat";
-            testCounter.SetTargetString(newTestTarget);
+            testCounter.SetTargetWord(newTestTarget);
             string result = testCounter.GetTargetWord();
 
             //Assert
             Assert.AreEqual(newTestTarget, result);
+        }
 
+        [TestMethod]
+        public void SetTargetWord_SetNewTargetWordToLower_String()
+        {
+            //Arrange
+            string testTarget = "the";
+            WordCounter testCounter = new WordCounter(testTarget);
+
+            //Act
+            string newTestTarget = "CAT";
+            testCounter.SetTargetWord(newTestTarget);
+            string result = testCounter.GetTargetWord();
+
+            //Assert
+            Assert.AreEqual("cat", result);
         }
     }
 }
