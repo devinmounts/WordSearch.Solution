@@ -60,10 +60,11 @@ namespace WordSearch.Tests
         {
             //Arrange
             string testPhrase = "The cat";
-            WordCounter testCounter = new WordCounter(testPhrase);
+            WordCounter testCounter = new WordCounter();
 
             //Act
-            string[] resultArray = testCounter.SplitCompareString(testPhrase);
+            testCounter.SetSplitCompareString(testPhrase);
+            string[] resultArray = testCounter.GetComparePhrase();
 
 
             //Assert

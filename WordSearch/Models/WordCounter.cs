@@ -6,15 +6,15 @@ namespace WordSearch.Models
 {
     public class WordCounter
     {
-        private int _result;
+        //private int _result;
         private string _targetWord;
-        private string _comparePhrase;
+        private string[] _comparePhrase;
+
         //private List<string> _testString = new List<string> { };
 
-        public WordCounter(string targetWord = "", string phrase = "")
+        public WordCounter()
         {
-            _targetWord = targetWord;
-            _comparePhrase = phrase;
+
         }
 
         public WordCounter(string targetWord = "")
@@ -22,10 +22,13 @@ namespace WordSearch.Models
             _targetWord = targetWord;
         }
 
-        public WordCounter()
+        public WordCounter(string targetWord = "", string phrase = "")
         {
-            
+            _targetWord = targetWord;
+            _comparePhrase = phrase.ToLower().Split(' ');
         }
+
+
 
         public void SetTargetWord(string newTargetWord)
         {
@@ -36,22 +39,22 @@ namespace WordSearch.Models
             return _targetWord;
         }
 
-        public string[] SplitCompareString(string newComparePhrase)
-        {
-            string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
-            return splitPhrase;
-        }
-
-        //public void SetSplitCompareString(string newComparePhrase)
+        //public string[] SplitCompareString(string newComparePhrase)
         //{
         //    string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
-        //    _comparePhrase = splitPhrase;
+        //    return splitPhrase;
         //}
 
-        //public string[] GetComparePhrase()
-        //{
-        //    return _comparePhrase;
-        //}
+        public void SetSplitCompareString(string newComparePhrase)
+        {
+            string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
+            _comparePhrase = splitPhrase;
+        }
+
+        public string[] GetComparePhrase()
+        {
+            return _comparePhrase;
+        }
 
 
         public int CheckSplitPhrase(string targetWord, string targetPhrase)
@@ -59,8 +62,8 @@ namespace WordSearch.Models
             int score = 0; 
             SetTargetWord(targetWord);
             string inputWord = GetTargetWord();
-            string[] inputPhrase = SplitCompareString(targetPhrase);
-
+            SetSplitCompareString(targetPhrase);
+            string[] inputPhrase = GetComparePhrase();
             if (!inputPhrase.Contains(inputWord))
             {
                 return score = 0;
@@ -71,7 +74,7 @@ namespace WordSearch.Models
                 {
                     if (inputWord == inputPhrase[i])
                     {
-                        return score += 1;
+                        return score += 5;
                     }
                 }
             }
