@@ -6,11 +6,9 @@ namespace WordSearch.Models
 {
     public class WordCounter
     {
-        //private int _result;
+        private int _result;
         private string _targetWord;
         private string[] _comparePhrase;
-
-        //private List<string> _testString = new List<string> { };
 
         public WordCounter()
         {
@@ -39,12 +37,6 @@ namespace WordSearch.Models
             return _targetWord;
         }
 
-        //public string[] SplitCompareString(string newComparePhrase)
-        //{
-        //    string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
-        //    return splitPhrase;
-        //}
-
         public void SetSplitCompareString(string newComparePhrase)
         {
             string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
@@ -56,6 +48,15 @@ namespace WordSearch.Models
             return _comparePhrase;
         }
 
+        public int GetResult()
+        {
+            return _result;
+        }
+
+        public void SetResult(int score)
+        {
+            
+        }
 
         public int CheckSplitPhrase(string targetWord, string targetPhrase)
         {
