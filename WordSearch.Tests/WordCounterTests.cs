@@ -6,15 +6,14 @@ using WordSearch.Models;
 namespace WordSearch.Tests
 {
     [TestClass]
-    public class WordCounterTests
+    public class UnitTest1
     {
         [TestMethod]
         public void GetTargetWord_ReturnTargetWord_String()
         {
             //Arrange
             string testTarget = "the";
-            WordCounter testCounter = new WordCounter();
-            testCounter.SetTargetWord(testTarget);
+            WordCounter testCounter = new WordCounter(testTarget);
 
             //Act
 
@@ -29,8 +28,7 @@ namespace WordSearch.Tests
         {
             //Arrange
             string testTarget = "the";
-            WordCounter testCounter = new WordCounter();
-            testCounter.SetTargetWord(testTarget);
+            WordCounter testCounter = new WordCounter(testTarget);
 
             //Act
             string newTestTarget = "cat";
@@ -46,8 +44,7 @@ namespace WordSearch.Tests
         {
             //Arrange
             string testTarget = "the";
-            WordCounter testCounter = new WordCounter();
-            testCounter.SetTargetWord(testTarget);
+            WordCounter testCounter = new WordCounter(testTarget);
 
             //Act
             string newTestTarget = "CAT";
@@ -63,15 +60,15 @@ namespace WordSearch.Tests
         {
             //Arrange
             string testPhrase = "The cat";
-            WordCounter testCounter = new WordCounter();
-            testCounter.SetSplitCompareString(testPhrase);
+            WordCounter testCounter = new WordCounter(testPhrase);
 
             //Act
-            string[] resultArray = testCounter.GetCompareString();
+            string[] resultArray = testCounter.SplitCompareString(testPhrase);
 
 
             //Assert
             Assert.AreEqual(2, resultArray.Length);
+ 
         }
     }
 
