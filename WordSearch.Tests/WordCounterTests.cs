@@ -68,17 +68,23 @@ namespace WordSearch.Tests
 
             //Assert
             Assert.AreEqual(2, resultArray.Length);
- 
+
         }
 
         [TestMethod]
-        public void CheckSplitPhrase_Return
+        public void CheckSplitPhrase_ReturnNumberOfMatches_Int()
+        {
+            //Arrange
+            string testWord = "The";
+            string testPhrase = "The Cat walked down THe street to THE store.";
+            WordCounter testCounter = new WordCounter();
 
-//        [TestMethod]
-//        public void SaveTestString_AddTestStringToList_String()
-//        {
-//            //Arrange
-//            string testSave01 = "the";
-//            WordCounter testCounter = new WordCounter()
-//        }
+            //Act
+            int result = testCounter.CheckSplitPhrase(testWord, testPhrase);
+
+            //Assert
+            Assert.AreEqual(3, result);
+        }
+
+    }
 }
