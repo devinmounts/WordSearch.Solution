@@ -13,13 +13,31 @@ namespace WordSearch.Tests
         {
             //Arrange
             string testTarget = "the";
+            WordCounter testCounter = new WordCounter(testTarget);
 
             //Act
-            WordCounter testCounter = new WordCounter(testTarget);
+
             string result = testCounter.GetTargetWord();
 
             //Assert
             Assert.AreEqual(testTarget, result);
+        }
+
+        [TestMethod]
+        public void SetTargetWord_SetNewTargetWord_String()
+        {
+            //Arrange
+            string testTarget = "the";
+            WordCounter testCounter = new WordCounter(testTarget);
+
+            //Act
+            string newTestTarget = "cat";
+            testCounter.SetTargetString(newTestTarget);
+            string result = testCounter.GetTargetWord();
+
+            //Assert
+            Assert.AreEqual(newTestTarget, result);
+
         }
     }
 }

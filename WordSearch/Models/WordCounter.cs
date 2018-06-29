@@ -15,6 +15,10 @@ namespace WordSearch.Models
             _targetWord = targetWord;
         }
 
+        public void SetTargetString(string newTargetWord)
+        {
+            _targetWord = newTargetWord;
+        }
         public string GetTargetWord()
         {
             return _targetWord;
