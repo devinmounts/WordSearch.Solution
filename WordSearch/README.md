@@ -22,6 +22,7 @@
 1. Follow the instructions for downloading C#, .NET Core 1.1 and Mono from: https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-c
 1. Clone the repo at https://github.com/devinmounts/WordSearch.Solution.git
 1. Make a new branch
+1. Open WordSearch.Solution.sln in text editor
 1. Commit and push your changes
 1. Create a PR
 
