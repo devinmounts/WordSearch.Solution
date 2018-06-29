@@ -59,7 +59,7 @@ namespace WordSearch.Tests
         public void SplitCompareString_ReturnStringArray_String()
         {
             //Arrange
-            string testPhrase = "The cat";
+            string testPhrase = "The cat is walking";
             WordCounter testCounter = new WordCounter();
 
             //Act
@@ -68,7 +68,7 @@ namespace WordSearch.Tests
 
 
             //Assert
-            Assert.AreEqual(2, resultArray.Length);
+            Assert.AreEqual(4, resultArray.Length);
 
         }
 

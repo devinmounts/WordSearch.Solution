@@ -70,15 +70,17 @@ namespace WordSearch.Models
             }
             else
             {
-                for (int i = 0; i <= inputPhrase.Length; i++)  
+                int i = 0;
+                foreach (string word in inputPhrase)
                 {
                     if (inputWord == inputPhrase[i])
                     {
-                        return score += 5;
+                        score += 1;
                     }
+                    i++;               
                 }
+                return score;
             }
-            return score;
         }
   
     }
