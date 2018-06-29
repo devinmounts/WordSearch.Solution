@@ -9,8 +9,17 @@ namespace WordSearch.Tests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void GetTargetWord_ReturnTargetWord_String()
         {
+            //Arrange
+            string testTarget = "the";
+
+            //Act
+            WordCounter testCounter = new WordCounter(testTarget);
+            string result = testCounter.GetTargetWord();
+
+            //Assert
+            Assert.AreEqual(testTarget, result);
         }
     }
 }
