@@ -8,7 +8,7 @@ namespace WordSearch.Models
     {
         //private int _result;
         private string _targetWord;
-        private string[] _comparePhrase;
+        //private string[] _comparePhrase;
         //private List<string> _testString = new List<string> { };
 
         public WordCounter(string targetWord = "")
@@ -25,18 +25,19 @@ namespace WordSearch.Models
             return _targetWord;
         }
 
-        public string[] SplitCompareString(string comparePhrase)
+        public string[] SplitCompareString(string newComparePhrase)
         {
-            string[] splitPhrase = comparePhrase.Split(' ');
+            string[] splitPhrase = newComparePhrase.ToLower().Split(' ');
             return splitPhrase;
+        }
+
 
             //public void SaveTestString(string compareString)
             //{
             //    _testString.Add(compareString.ToLower());
             //}
 
-            //public string GetAll
-        }
+        //public string GetAll;
 
     }
 }

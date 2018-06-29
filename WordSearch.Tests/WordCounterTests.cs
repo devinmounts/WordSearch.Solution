@@ -63,10 +63,12 @@ namespace WordSearch.Tests
             WordCounter testCounter = new WordCounter(testPhrase);
 
             //Act
-            string[] wordsArray = testCounter.SplitCompareString(testPhrase);
+            string[] resultArray = testCounter.SplitCompareString(testPhrase);
+
 
             //Assert
-            Assert.AreEqual(2, wordsArray.Length);
+            Assert.AreEqual(2, resultArray.Length);
+            Console.WriteLine(resultArray);
         }
     }
 
