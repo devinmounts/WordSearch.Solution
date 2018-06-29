@@ -11,7 +11,7 @@
 | :-------------     | :------------- | :------------- |
 | **Program allows user to enter a word, and stores that word**| Input: "The" | Output: "The" |
 | **Program converts stored word to lower case letters.**| Input: "The" | Output: "the" |
-| **Program allows user to enter in a string, and stores that string** | Input: "The cat" | Output: "The cat" |
+| **Program allows user to enter in a string, and saves that string** | Input: "The cat" | Output: "The cat" |
 | **Program converts stored string to lower case letters.**| Input: "The cat" | Output: "the cat" |
 | **Program stores lowercase string as a list of lowercase words.**| Input: "the cat" | Output: "Item 1: the; Item 2: "cat" |
 | **Program loops through list of words checking to see if lowercase test word is present in the list of lowercase words.**| Input: "Test Word: The; Test string: "The cat" | Output: "Compare: "the" to List: Item 1: "the"; Item 2 "cat"." |

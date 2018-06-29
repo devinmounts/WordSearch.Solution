@@ -54,5 +54,27 @@ namespace WordSearch.Tests
             //Assert
             Assert.AreEqual("cat", result);
         }
-    }
-}
+
+        [TestMethod]
+        public void SplitCompareString_ReturnStringArray_String()
+        {
+            //Arrange
+            string testPhrase = "The cat";
+            WordCounter testCounter = new WordCounter(testPhrase);
+            string[] splitArray =
+            //Act
+            string[] testSplit = testCounter.SplitCompareString(testPhrase);
+
+            //Assert
+            Assert.AreEqual({ "The", "cat"}, testSplit);
+                
+        }
+
+//        [TestMethod]
+//        public void SaveTestString_AddTestStringToList_String()
+//        {
+//            //Arrange
+//            string testSave01 = "the";
+//            WordCounter testCounter = new WordCounter()
+//        }
+//}
