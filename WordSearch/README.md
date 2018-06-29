@@ -13,8 +13,8 @@
 | **Program converts stored word to lower case letters.**| Input: "The" | Output: "the" |
 | **Program allows user to enter in a string, and saves that string** | Input: "The cat" | Output: "The cat" |
 | **Program converts stored string to lower case letters.**| Input: "The cat" | Output: "the cat" |
-| **Program stores lowercase string as a list of lowercase words.**| Input: "the cat" | Output: "Item 1: the; Item 2: "cat" |
-| **Program loops through list of words checking to see if lowercase test word is present in the list of lowercase words.**| Input: "Test Word: The; Test string: "The cat" | Output: "Compare: "the" to List: Item 1: "the"; Item 2 "cat"." |
+| **Program splits lowercase string into array of lowercase words.**| Input: "the cat" | Output: {"the", "cat"} |
+| **Program loops through arary of words checking to see if lowercase test word is present.**| Input: "Test Word: The; Test string: "The cat" | Output: "Compare: "the" to Array {"the", "cat"}." |
 | **Program returns an integer value for the number of times the test word appears in the list.**| Input: "Test Word: "The"; Test String: "The cat" | Output: "1" |
 
 ## Setup/Contribution Requirements

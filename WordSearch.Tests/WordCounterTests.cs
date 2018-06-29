@@ -70,7 +70,9 @@ namespace WordSearch.Tests
             Assert.AreEqual(2, resultArray.Length);
  
         }
-    }
+
+        [TestMethod]
+        public void CheckSplitPhrase_Return
 
 //        [TestMethod]
 //        public void SaveTestString_AddTestStringToList_String()

@@ -53,6 +53,7 @@ namespace WordSearch.Models
                     }
                 }
             }
+            return _result;
         }
   
     }
