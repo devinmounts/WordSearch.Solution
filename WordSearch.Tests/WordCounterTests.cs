@@ -61,14 +61,14 @@ namespace WordSearch.Tests
             //Arrange
             string testPhrase = "The cat";
             WordCounter testCounter = new WordCounter(testPhrase);
-            string[] splitArray =
+
             //Act
-            string[] testSplit = testCounter.SplitCompareString(testPhrase);
+            string[] wordsArray = testCounter.SplitCompareString(testPhrase);
 
             //Assert
-            Assert.AreEqual({ "The", "cat"}, testSplit);
-                
+            Assert.AreEqual(2, wordsArray.Length);
         }
+    }
 
 //        [TestMethod]
 //        public void SaveTestString_AddTestStringToList_String()
@@ -77,4 +77,4 @@ namespace WordSearch.Tests
 //            string testSave01 = "the";
 //            WordCounter testCounter = new WordCounter()
 //        }
-//}
+}
